@@ -1,0 +1,61 @@
+{
+  "name": "mhrise-cheat-generator",
+  "version": "16.0.2",
+  "private": true,
+  "author": "jinghaihan",
+  "license": "MIT",
+  "homepage": "https://github.com/jinghaihan/mhrise-cheat-generator#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinghaihan/mhrise-cheat-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jinghaihan/mhrise-cheat-generator/issues"
+  },
+  "scripts": {
+    "dev": "vite",
+    "preview": "vite preview",
+    "build": "vite build",
+    "test": "vitest",
+    "lint": "eslint .",
+    "typecheck": "vue-tsc --noEmit",
+    "deps": "taze major -I",
+    "postinstall": "npx simple-git-hooks"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^7.0.1",
+    "@unhead/vue": "^2.0.8",
+    "ant-design-vue": "^4.2.6",
+    "file-saver": "^2.0.5",
+    "jszip": "^3.10.1",
+    "lodash-es": "^4.17.21",
+    "pinia": "^3.0.2",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.1",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.12.0",
+    "@types/file-saver": "^2.0.7",
+    "@types/lodash-es": "^4.17.12",
+    "@vitejs/plugin-vue": "^5.2.3",
+    "@vitejs/plugin-vue-jsx": "^4.1.2",
+    "eslint": "^9.25.1",
+    "less": "^4.3.0",
+    "less-loader": "^12.2.0",
+    "lint-staged": "^15.5.1",
+    "simple-git-hooks": "^2.13.0",
+    "taze": "^19.0.4",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.4",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "vitest": "^3.1.2",
+    "vue-tsc": "^2.2.10"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
